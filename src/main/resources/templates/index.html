@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bejelentkezés</title>
+    <meta charset="UTF-8">
+    <link th:href="@{/style2.css}" rel="stylesheet" />
+</head>
+<body>
+<h2 class="red">Üdvözöljük a honlapon!</h2>
+
+<form action="/login" method="post" class="keret">
+    <p class="center">Kérem adja meg a bejelentkezési adatait!</p>
+    <table>
+        <tr>
+            <td>felhasználónév:</td>
+            <td><input type ="text" name ="username"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td th:text="${nincs}" style="color: red"></td>
+        </tr>
+        <tr>
+            <td>jelszó:</td>
+            <td><input type ="password" name="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td th:text="${rossz}" style="color: red"></td>
+        </tr>
+    </table>
+    <p class="center"><input type="submit" name="login" value ="Bejelentkezés"></p>
+</form>
+<form class="center" action="/regi" method="post">
+    <p>
+        Még nem regisztrált?
+        <input type="submit" value="Kattintson ide!">
+    </p>
+</form>
+</body>
+</html>

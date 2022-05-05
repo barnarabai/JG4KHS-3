@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Regisztráció</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/styles/style2.css">
+    <link th:href="@{/style2.css}" rel="stylesheet" />
+</head>
+<body>
+<h2 class="red">Regisztráció</h2>
+<form class="keret" action="/register" method="post">
+    <p class="center">Kérem töltse ki a mezőket!</p>
+    <table>
+        <tr>
+            <td>felhasználónév:</td>
+            <td><input type ="text" name ="username"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td th:text="${foglalt}" style="color: red"></td>
+        </tr>
+        <tr>
+            <td>teljes név:</td>
+            <td><input type ="text" name ="name"></td>
+        </tr>
+        <tr>
+            <td>jelszó:</td>
+            <td><input type ="password" name="password" ></td>
+        </tr>
+    </table>
+    <p class="center"><input type="submit" value = "Regisztráció"></p>
+
+</form>
+<form class="center" action="/index" method="post">
+    <p>
+        Már van felhasználója?
+        <input type="submit" value="Itt bejelentkezhet!">
+    </p>
+</form>
+
+<div th:text="${szabaly}" style="color: red" class="center"></div>
+
+</body>
+</html>

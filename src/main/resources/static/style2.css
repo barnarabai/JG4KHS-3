@@ -1,0 +1,36 @@
+.center {
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td {
+    text-align: end;
+}
+
+
+.keret {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding-bottom: 10px;
+}
+
+.red {
+    background: linear-gradient(to right, red, orange , yellow, green, cyan, blue, violet);
+    color:white;
+    font-family: "Comic Sans MS", serif;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+.kep {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    max-width: 20%;
+}
